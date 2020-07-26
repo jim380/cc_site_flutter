@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webpage/LandingPage/LandingPage.dart';
 import 'package:flutter_webpage/Navbar/Navbar.dart';
 import 'package:flutter_webpage/sections/portfolio/portfolio_section.dart';
+import 'package:flutter_webpage/sections/team/team_section.dart';
 import './sections/services/services_section.dart';
 
 class HomePage extends StatelessWidget {
@@ -33,6 +34,7 @@ class HomePage extends StatelessWidget {
               ),
               ServiceSection(),
               PortfolioSection(),
+              TeamSection(),
             ],
           ),
         ),

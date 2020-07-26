@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/models/portfolio.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../constants.dart';
 
-class RecentWorkCard extends StatefulWidget {
+class PortfolioCard extends StatefulWidget {
   // just press "Command + ."
-  const RecentWorkCard({
+  const PortfolioCard({
     Key key,
     this.index,
     this.press,
@@ -15,10 +16,10 @@ class RecentWorkCard extends StatefulWidget {
   final Function press;
 
   @override
-  _RecentWorkCardState createState() => _RecentWorkCardState();
+  _PortfolioCardState createState() => _PortfolioCardState();
 }
 
-class _RecentWorkCardState extends State<RecentWorkCard> {
+class _PortfolioCardState extends State<PortfolioCard> {
   bool isHover = false;
   @override
   Widget build(BuildContext context) {
@@ -58,9 +59,16 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                           .copyWith(height: 1.5),
                     ),
                     SizedBox(height: kDefaultPadding),
-                    Text(
-                      "View Details",
-                      style: TextStyle(decoration: TextDecoration.underline),
+                    InkWell(
+                      child: Text(
+                        "View Details",
+                        style: TextStyle(decoration: TextDecoration.underline),
+                      ),
+                      onTap: () async {
+                        if (await canLaunch("www.google.com")) {
+                          await launch("www.google.com");
+                        }
+                      },
                     )
                   ],
                 ),

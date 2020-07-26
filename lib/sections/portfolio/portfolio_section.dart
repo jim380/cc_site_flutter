@@ -40,7 +40,7 @@ class PortfolioSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 portfolio.length,
-                (index) => RecentWorkCard(index: index, press: () {}),
+                (index) => PortfolioCard(index: index, press: () {}),
               ),
             ),
           ),
