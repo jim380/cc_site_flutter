@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../extensions/hover_extension.dart';
 
 class LandingPage extends StatelessWidget {
   List<Widget> pageChildren(double width) {
@@ -35,7 +36,7 @@ class LandingPage extends StatelessWidget {
                   style: TextStyle(color: Colors.red),
                 ),
               ),
-            )
+            ).moveUpOnHover
           ],
         ),
       ),

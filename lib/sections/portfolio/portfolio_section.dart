@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../models/portfolio.dart';
 import '../../shared/section_title.dart';
 import '../../constants.dart';
-
+import '../../extensions/hover_extension.dart';
 import './portfolio_card.dart';
 
 class PortfolioSection extends StatelessWidget {
@@ -42,7 +42,8 @@ class PortfolioSection extends StatelessWidget {
                 runSpacing: kDefaultPadding * 2,
                 children: List.generate(
                   portfolio.length,
-                  (index) => PortfolioCard(index: index, press: () {}),
+                  (index) =>
+                      PortfolioCard(index: index, press: () {}).moveUpOnHover,
                 ),
               ),
             ),

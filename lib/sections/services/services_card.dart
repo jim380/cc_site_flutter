@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/services.dart';
-
+import '../../extensions/hover_extension.dart';
 import '../../constants.dart';
 
 class ServiceCard extends StatefulWidget {
@@ -62,7 +62,7 @@ class _ServiceCardState extends State<ServiceCard> {
                 services[widget.index].image,
                 fit: BoxFit.fill,
               ),
-            ),
+            ).moveUpOnHover,
             SizedBox(height: kDefaultPadding),
             Text(
               services[widget.index].title,

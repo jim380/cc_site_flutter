@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../shared/section_title.dart';
 import '../../constants.dart';
 import '../../models/team.dart';
-
+import '../../extensions/hover_extension.dart';
 import './team_card.dart';
 
 class TeamSection extends StatelessWidget {
@@ -30,7 +30,7 @@ class TeamSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 members.length,
-                (index) => TeamCard(index: index),
+                (index) => TeamCard(index: index).moveUpOnHover,
               ),
             )),
           ],

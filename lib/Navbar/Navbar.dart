@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../extensions/hover_extension.dart';
 
 class Navbar extends StatelessWidget {
   @override
@@ -65,7 +66,7 @@ class DesktopNavbar extends StatelessWidget {
                     "Get Started",
                     style: TextStyle(color: Colors.white),
                   ),
-                )
+                ).moveUpOnHover
               ],
             )
           ],

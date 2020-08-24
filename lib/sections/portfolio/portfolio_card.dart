@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/models/portfolio.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../constants.dart';
 
 class PortfolioCard extends StatefulWidget {
