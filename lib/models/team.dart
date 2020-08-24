@@ -15,7 +15,7 @@ List<Team> members = [
     name: "Jay Jie",
     bio:
         "Jay fell into the blockchain rabbit hole in 2016 and hasn’t been able to get out. He loves his pitbull and enjoys weight training.",
-    userPic: "images/jay.jpg",
+    userPic: "assets/images/jay.jpg",
     color: Color(0xFFD9FFFC),
   ),
   Team(
@@ -23,7 +23,7 @@ List<Team> members = [
     name: "Ken Trueba",
     bio:
         "Coming from sales management Ken fulfills the missing element of the team. He enjoys cooking and hiking with his dogs.",
-    userPic: "images/ken.jpg",
+    userPic: "assets/images/ken.jpg",
     color: Color(0xFFE4FFC7),
   ),
   Team(
@@ -31,7 +31,7 @@ List<Team> members = [
     name: "Artem Akatev",
     bio:
         "Artem juggles web development, blockchain, and cryptography. He enjoys working on cars, and playing basketball.",
-    userPic: "images/art.jpeg",
+    userPic: "assets/images/art.jpeg",
     color: Color(0xFFFFF3DD),
   ),
   Team(
@@ -39,7 +39,7 @@ List<Team> members = [
     name: "Jason Maehr",
     bio:
         "Wharton School of Business graduate, ex-Wall Streeter, Jason looks out for the team with his experience. And kindness.",
-    userPic: "images/jason.png",
+    userPic: "assets/images/jason.png",
     color: Color(0xFFFFE0E0),
   ),
 ];
