@@ -31,4 +31,16 @@ List<Portfolio> portfolio = [
     category: "Staking",
     image: "images/wanchain.png",
   ),
+  Portfolio(
+    id: 5,
+    title: "Band Protocol",
+    category: "Staking",
+    image: "images/band.png",
+  ),
+  Portfolio(
+    id: 6,
+    title: "Skale",
+    category: "Staking",
+    image: "images/skale.png",
+  ),
 ];

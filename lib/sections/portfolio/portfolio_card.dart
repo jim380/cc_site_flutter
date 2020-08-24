@@ -32,8 +32,8 @@ class _PortfolioCardState extends State<PortfolioCard> {
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 200),
-        height: 320,
-        width: 540,
+        height: 250,
+        width: 360,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),

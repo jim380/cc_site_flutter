@@ -33,7 +33,7 @@ class _TeamCardState extends State<TeamCard> {
         margin: EdgeInsets.only(top: kDefaultPadding * 3),
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         height: 300,
-        width: 300,
+        width: 280,
         decoration: BoxDecoration(
           color: members[widget.index].color,
           borderRadius: BorderRadius.circular(10),

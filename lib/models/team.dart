@@ -34,14 +34,14 @@ List<Team> members = [
     userPic: "images/art.jpeg",
     color: Color(0xFFFFF3DD),
   ),
-  // Team(
-  //   id: 4,
-  //   name: "Jason Maehr",
-  //   bio:
-  //       "Wharton School of Business graduate, ex-Wall Streeter, Jason looks out for the team with his experience. And kindness.",
-  //   userPic: "images/jason.png",
-  //   color: Color(0xFFFFE0E0),
-  // ),
+  Team(
+    id: 4,
+    name: "Jason Maehr",
+    bio:
+        "Wharton School of Business graduate, ex-Wall Streeter, Jason looks out for the team with his experience. And kindness.",
+    userPic: "images/jason.png",
+    color: Color(0xFFFFE0E0),
+  ),
 ];
 
 String bio =
