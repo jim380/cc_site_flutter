@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webpage/LandingPage/LandingPage.dart';
-import 'package:flutter_webpage/Navbar/Navbar.dart';
+//import 'package:flutter_webpage/sections/navbar/Navbar.dart';
+import './sections/navbar/navigation_bar.dart';
 import 'package:flutter_webpage/sections/portfolio/portfolio_section.dart';
 import 'package:flutter_webpage/sections/team/team_section.dart';
 import './sections/services/services_section.dart';
@@ -26,7 +27,8 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Navbar(),
+              //Navbar(),
+              NavigationBar(),
               Padding(
                 padding: const EdgeInsets.symmetric(
                     vertical: 20.0, horizontal: 40.0),

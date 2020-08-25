@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../extensions/hover_extension.dart';
+import '../../extensions/hover_extension.dart';
 
 class Navbar extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider_architecture/provider_architecture.dart';
-import '../models/navbar_item.dart';
+import '../../../models/navbar_item.dart';
 
 class NavBarItemMobile extends ProviderWidget<NavBarItemModel> {
   @override
@@ -15,7 +15,7 @@ class NavBarItemMobile extends ProviderWidget<NavBarItemModel> {
           ),
           Text(
             model.title,
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: 18, color: Colors.white),
           )
         ],
       ),
