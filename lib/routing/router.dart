@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../routing/route_names.dart';
-import '../sections/portfolio/portfolio_section.dart';
-// import 'package:the_basics/views/episode_details/episode_details.dart';
-// import 'package:the_basics/views/episodes/episodes_view.dart';
+import '../views/home/home_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case PortfolioRoute:
-      return _getPageRoute(PortfolioSection(), settings);
-    //case PortfolioRoute:
-    //return _getPageRoute(AboutView(), settings);
+    case HomeRoute:
+      return _getPageRoute(HomeView(), settings);
+    // case PortfolioRoute:
+    // return _getPageRoute(AboutView(), settings);
     // case EpisodesRoute:
     //   return _getPageRoute(EpisodesView(), settings);
     // case EpisodeDetailsRoute:
     //   return _getPageRoute(EpisodeDetails(), settings);
     default:
-    //return _getPageRoute(HomeView(), settings);
+      return _getPageRoute(HomeView(), settings);
   }
 }
 

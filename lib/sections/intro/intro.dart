@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../extensions/hover_extension.dart';
+import '../../extensions/hover_extension.dart';
 
-class LandingPage extends StatelessWidget {
+class IntroSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {
     return <Widget>[
       Container(
