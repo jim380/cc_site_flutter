@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider_architecture/provider_architecture.dart';
+import 'package:stacked/stacked.dart';
 import '../../../models/navbar_item.dart';
 
-class NavBarItemMobile extends ProviderWidget<NavBarItemModel> {
+class NavBarItemMobile extends ViewModelWidget<NavBarItemModel> {
   @override
   Widget build(BuildContext context, NavBarItemModel model) {
     return Padding(
