@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import './sections/intro/intro.dart';
-//import 'package:flutter_webpage/sections/navbar/Navbar.dart';
+import 'package:cc_site_flutter/pages/home/intro/intro.dart';
 import './widgets/navbar/navigation_bar.dart';
-import 'package:flutter_webpage/sections/portfolio/portfolio_section.dart';
-import 'package:flutter_webpage/sections/team/team_section.dart';
-import './sections/services/services_section.dart';
+import 'package:cc_site_flutter/pages/home/portfolio/portfolio_section.dart';
+import 'package:cc_site_flutter/pages/home/team/team_section.dart';
+import 'package:cc_site_flutter/pages/home/services/services_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

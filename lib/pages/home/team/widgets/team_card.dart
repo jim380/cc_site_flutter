@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../models/team.dart';
+import 'package:cc_site_flutter/models/team.dart';
 
-import '../../constants.dart';
+import 'package:cc_site_flutter/constants/constants.dart';
 
 class TeamCard extends StatefulWidget {
   const TeamCard({

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import '../../sections/portfolio/portfolio_section.dart';
-import '../../sections/team/team_section.dart';
-import '../../sections/services/services_section.dart';
-import '../../sections/intro/intro.dart';
+import 'package:cc_site_flutter/pages/home/portfolio/portfolio_section.dart';
+import 'package:cc_site_flutter/pages/home/team/team_section.dart';
+import 'package:cc_site_flutter/pages/home/services/services_section.dart';
+import 'package:cc_site_flutter/pages/home/intro/intro.dart';
 import '../../widgets/nav_drawer/navigation_drawer.dart';
 import '../../widgets/navbar/navigation_bar.dart';
 

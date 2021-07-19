@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../shared/section_title.dart';
-import '../../constants.dart';
-import '../../models/services.dart';
+import 'package:cc_site_flutter/shared/section_title.dart';
+import 'package:cc_site_flutter/constants/constants.dart';
+import 'package:cc_site_flutter/models/services.dart';
 
-import '../services/services_card.dart';
+import 'widgets/services_card.dart';
 
 class ServiceSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {

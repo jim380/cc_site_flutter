@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../shared/section_title.dart';
-import '../../constants.dart';
-import '../../models/team.dart';
-import '../../extensions/hover_extension.dart';
-import './team_card.dart';
+import 'package:cc_site_flutter/shared/section_title.dart';
+import 'package:cc_site_flutter/constants/constants.dart';
+import 'package:cc_site_flutter/models/team.dart';
+import 'package:cc_site_flutter/extensions/hover_extension.dart';
+import 'widgets/team_card.dart';
 
 class TeamSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {

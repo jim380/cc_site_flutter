@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../extensions/hover_extension.dart';
+import 'package:cc_site_flutter/extensions/hover_extension.dart';
 
 class IntroSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {

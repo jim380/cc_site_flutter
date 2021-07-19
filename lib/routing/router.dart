@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../routing/route_names.dart';
-import '../views/home/home_view.dart';
+import '../pages/home/home.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 //import 'package:web_app/components/hireme_card.dart';
-import '../../models/portfolio.dart';
-import '../../shared/section_title.dart';
-import '../../constants.dart';
-import '../../extensions/hover_extension.dart';
-import './portfolio_card.dart';
+import 'package:cc_site_flutter/models/portfolio.dart';
+import 'package:cc_site_flutter/shared/section_title.dart';
+import 'package:cc_site_flutter/constants/constants.dart';
+import 'package:cc_site_flutter/extensions/hover_extension.dart';
+import 'widgets/portfolio_card.dart';
 
 class PortfolioSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {
