@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cc_site_flutter/extensions/hover_extension.dart';
+import 'package:cc_site_flutter/routes/routes.dart';
 
 class IntroSection extends StatelessWidget {
-  List<Widget> pageChildren(double width) {
+  List<Widget> pageChildren(double width, BuildContext context) {
     return <Widget>[
       Container(
         width: width,
@@ -27,7 +28,8 @@ class IntroSection extends StatelessWidget {
               color: Colors.white,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
-              onPressed: () {},
+              onPressed: () =>
+                  Navigator.of(context)?.pushNamed(RouteGenerator.AboutRoute),
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                     vertical: 20.0, horizontal: 40.0),
@@ -58,11 +60,11 @@ class IntroSection extends StatelessWidget {
         if (constraints.maxWidth > 800) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: pageChildren(constraints.biggest.width / 2),
+            children: pageChildren(constraints.biggest.width / 2, context),
           );
         } else {
           return Column(
-            children: pageChildren(constraints.biggest.width),
+            children: pageChildren(constraints.biggest.width, context),
           );
         }
       },

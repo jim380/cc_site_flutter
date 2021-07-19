@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../routing/route_names.dart';
+import 'package:cc_site_flutter/routes/routes.dart';
 import '../navbar/navbar_items/navbar_item.dart';
 import './navigation_drawer_header.dart';
 
@@ -25,21 +25,19 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           NavigationDrawerHeader(),
-          // BONUS: Combine the UI for this widget with the NavBarItem and make it responsive.
-          // The UI for the current DrawerItem shows when it's in mobile, else it shows the NavBarItem ui.
           NavBarItem(
             'About',
-            PortfolioRoute,
+            RouteGenerator.PortfolioRoute,
             icon: Icons.person,
           ),
           NavBarItem(
             'Portfolio',
-            PortfolioRoute,
+            RouteGenerator.PortfolioRoute,
             icon: Icons.book,
           ),
           NavBarItem(
             'Publication',
-            PortfolioRoute,
+            RouteGenerator.PortfolioRoute,
             icon: Icons.book,
           ),
         ],

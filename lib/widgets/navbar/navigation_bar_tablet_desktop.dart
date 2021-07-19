@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../routing/route_names.dart';
+import 'package:cc_site_flutter/routes/routes.dart';
 import 'navbar_items/navbar_item.dart';
 import '../../extensions/hover_extension.dart';
 
@@ -23,17 +23,19 @@ class NavigationBarTabletDesktop extends StatelessWidget {
             ),
             Row(
               children: <Widget>[
-                NavBarItem('Home', HomeRoute).showCursorOnHover.moveUpOnHover,
-                SizedBox(
-                  width: 30,
-                ),
-                NavBarItem('About', PortfolioRoute)
+                NavBarItem('Home', RouteGenerator.HomeRoute)
                     .showCursorOnHover
                     .moveUpOnHover,
                 SizedBox(
                   width: 30,
                 ),
-                NavBarItem('Portfolio', PortfolioRoute)
+                NavBarItem('About', RouteGenerator.PortfolioRoute)
+                    .showCursorOnHover
+                    .moveUpOnHover,
+                SizedBox(
+                  width: 30,
+                ),
+                NavBarItem('Portfolio', RouteGenerator.PortfolioRoute)
                     .showCursorOnHover
                     .moveUpOnHover,
                 SizedBox(
