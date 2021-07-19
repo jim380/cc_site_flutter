@@ -10,8 +10,8 @@ extension HoverExtensions on Widget {
   Widget get showCursorOnHover {
     return MouseRegion(
       child: this, // the widget we're using the extension on
-      onHover: (event) => appContainer.style.cursor = 'pointer',
-      onExit: (event) => appContainer.style.cursor = 'default',
+      onHover: (event) => appContainer!.style.cursor = 'pointer',
+      onExit: (event) => appContainer!.style.cursor = 'default',
     );
   }
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Team {
-  final String name, bio, userPic;
-  final int id;
-  final Color color;
+  final String? name, bio, userPic;
+  final int? id;
+  final Color? color;
 
   Team({this.name, this.bio, this.userPic, this.id, this.color});
 }

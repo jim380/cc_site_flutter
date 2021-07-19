@@ -5,11 +5,11 @@ import 'package:cc_site_flutter/constants/constants.dart';
 
 class ServiceCard extends StatefulWidget {
   const ServiceCard({
-    Key key,
+    Key? key,
     this.index,
   }) : super(key: key);
 
-  final int index;
+  final int? index;
 
   @override
   _ServiceCardState createState() => _ServiceCardState();
@@ -34,7 +34,7 @@ class _ServiceCardState extends State<ServiceCard> {
         height: 256,
         width: 256,
         decoration: BoxDecoration(
-          color: services[widget.index].color,
+          color: services[widget.index!].color,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if (isHover) kDefaultCardShadow],
         ),
@@ -59,13 +59,13 @@ class _ServiceCardState extends State<ServiceCard> {
                 ],
               ),
               child: Image.asset(
-                services[widget.index].image,
+                services[widget.index!].image!,
                 fit: BoxFit.fill,
               ),
             ).moveUpOnHover,
             SizedBox(height: kDefaultPadding),
             Text(
-              services[widget.index].title,
+              services[widget.index!].title!,
               style: TextStyle(fontSize: 22),
             ),
           ],

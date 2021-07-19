@@ -14,7 +14,7 @@ class NavBarItemMobile extends ViewModelWidget<NavBarItemModel> {
             width: 30,
           ),
           Text(
-            model.title,
+            model.title!,
             style: TextStyle(fontSize: 18, color: Colors.white),
           )
         ],

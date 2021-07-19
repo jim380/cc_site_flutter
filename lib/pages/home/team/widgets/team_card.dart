@@ -5,11 +5,11 @@ import 'package:cc_site_flutter/constants/constants.dart';
 
 class TeamCard extends StatefulWidget {
   const TeamCard({
-    Key key,
+    Key? key,
     this.index,
   }) : super(key: key);
 
-  final int index;
+  final int? index;
 
   @override
   _TeamCardState createState() => _TeamCardState();
@@ -35,7 +35,7 @@ class _TeamCardState extends State<TeamCard> {
         height: 300,
         width: 280,
         decoration: BoxDecoration(
-          color: members[widget.index].color,
+          color: members[widget.index!].color,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if (isHover) kDefaultCardShadow],
         ),
@@ -52,13 +52,13 @@ class _TeamCardState extends State<TeamCard> {
                   border: Border.all(color: Colors.white, width: 5),
                   boxShadow: [if (!isHover) kDefaultCardShadow],
                   image: DecorationImage(
-                    image: AssetImage(members[widget.index].userPic),
+                    image: AssetImage(members[widget.index!].userPic!),
                   ),
                 ),
               ),
             ),
             Text(
-              members[widget.index].bio,
+              members[widget.index!].bio!,
               style: TextStyle(
                 color: Colors.black, //kTextColor,
                 fontSize: 16,
@@ -69,7 +69,7 @@ class _TeamCardState extends State<TeamCard> {
             ),
             SizedBox(height: kDefaultPadding * 2),
             Text(
-              members[widget.index].name,
+              members[widget.index!].name!,
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],

@@ -29,7 +29,7 @@ class IntroSection extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(20.0))),
               onPressed: () =>
-                  Navigator.of(context)?.pushNamed(RouteGenerator.AboutRoute),
+                  Navigator.of(context).pushNamed(RouteGenerator.AboutRoute),
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                     vertical: 20.0, horizontal: 40.0),

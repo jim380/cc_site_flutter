@@ -4,7 +4,7 @@ import 'navbar_items/navbar_item.dart';
 import '../../extensions/hover_extension.dart';
 
 class NavigationBarTabletDesktop extends StatelessWidget {
-  const NavigationBarTabletDesktop({Key key}) : super(key: key);
+  const NavigationBarTabletDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +23,15 @@ class NavigationBarTabletDesktop extends StatelessWidget {
             ),
             Row(
               children: <Widget>[
-                NavBarItem('Home', RouteGenerator.HomeRoute)
-                    .showCursorOnHover
-                    .moveUpOnHover,
+                NavBarItem('Home', RouteGenerator.HomeRoute).showCursorOnHover,
                 SizedBox(
                   width: 30,
                 ),
-                NavBarItem('About', RouteGenerator.PortfolioRoute)
-                    .showCursorOnHover
-                    .moveUpOnHover,
+                NavBarItem('About', RouteGenerator.PortfolioRoute),
                 SizedBox(
                   width: 30,
                 ),
-                NavBarItem('Portfolio', RouteGenerator.PortfolioRoute)
-                    .showCursorOnHover
-                    .moveUpOnHover,
+                NavBarItem('Portfolio', RouteGenerator.PortfolioRoute),
                 SizedBox(
                   width: 30,
                 ),
@@ -50,7 +44,7 @@ class NavigationBarTabletDesktop extends StatelessWidget {
                     "Get Started",
                     style: TextStyle(color: Colors.white),
                   ),
-                ).showCursorOnHover.moveUpOnHover,
+                ),
               ],
             ),
           ],

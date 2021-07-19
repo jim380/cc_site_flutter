@@ -6,12 +6,11 @@ import '../../../locator.dart';
 import '../../../services/navigation.dart';
 import './navbar_item_desktop.dart';
 import './navbar_item_mobile.dart';
-import '../../../extensions/hover_extension.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
   final String navigationPath;
-  final IconData icon;
+  final IconData? icon;
   const NavBarItem(this.title, this.navigationPath, {this.icon});
 
   @override
@@ -30,7 +29,7 @@ class NavBarItem extends StatelessWidget {
         child: ScreenTypeLayout(
           tablet: NavBarItemTabletDesktop(),
           mobile: NavBarItemMobile(),
-        ).showCursorOnHover.moveUpOnHover,
+        ),
       ),
     );
   }

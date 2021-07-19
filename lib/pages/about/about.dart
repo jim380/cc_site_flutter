@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
-  const AboutPage({Key key}) : super(key: key);
+  const AboutPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class AboutPage extends StatelessWidget {
               } else {
                 print("Cannot pop");
               }
-              Navigator.pop(context);
+              Navigator.of(context).pop();
             },
             child: Padding(
               padding:
