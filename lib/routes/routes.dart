@@ -30,7 +30,7 @@ class RouteGenerator {
   static List<Route> generateInitialRoutes(String name) {
     return <Route>[
       MaterialPageRoute(
-        builder: (_) => const HomeView(),
+        builder: (_) => HomeView(),
       )
     ];
   }
