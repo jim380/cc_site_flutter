@@ -21,14 +21,15 @@ class PortfolioCard extends StatefulWidget {
 
 class _PortfolioCardState extends State<PortfolioCard> {
   var isHover = false;
-  late final _recognizer = TapGestureRecognizer()..onTap = _onTap;
+  late final _recognizer = TapGestureRecognizer()
+    ..onTap = () => launch(portfolio[widget.index!].url!);
 
-  // void _onTap(String? url) {
+  // void _onTap() {
   //   launch(portfolio[widget.index!].url!);
   // }
-  void _onTap() {
-    launch("https://www.google.com/");
-  }
+  // void _onTap() {
+  //   launch("https://www.google.com/");
+  // }
 
   @override
   Widget build(BuildContext context) {
