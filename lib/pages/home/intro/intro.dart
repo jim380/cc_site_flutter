@@ -20,7 +20,7 @@ class IntroSection extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20.0),
               child: Text(
-                "We are devoted to bringing financial freedom to everyone",
+                "We are devoted to bring financial freedom to everyone",
                 style: TextStyle(fontSize: 16.0, color: Colors.white),
               ),
             ),
