@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import "package:cc_site_flutter/controllers/menu_controller.dart";
 import 'package:cc_site_flutter/shared/widgets/header.dart';
 import 'package:cc_site_flutter/shared/widgets/side_menu.dart';
+import 'package:cc_site_flutter/pages/home/footer/footer.dart';
 
 class HomeView extends StatelessWidget {
   // const HomeView({Key? key}) : super(key: key);
@@ -47,6 +48,7 @@ class HomeView extends StatelessWidget {
                 ServiceSection(),
                 PortfolioSection(),
                 TeamSection(),
+                Footer(),
               ],
             ),
           ),
