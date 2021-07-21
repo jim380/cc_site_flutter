@@ -26,10 +26,10 @@ class SideMenu extends StatelessWidget {
                 ),
               ),
               ...List.generate(
-                _controller.menuItems.length,
+                _controller.navBarMenu.length,
                 (index) => DrawerItem(
                   isActive: index == _controller.selectedIndex,
-                  title: _controller.menuItems[index],
+                  title: _controller.navBarMenu[index].toString(),
                   press: () {
                     _controller.setMenuIndex(index);
                   },

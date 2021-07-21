@@ -4,10 +4,20 @@ import 'package:get/get.dart';
 import 'package:cc_site_flutter/constants/app_colors.dart';
 import 'package:cc_site_flutter/shared/responsive.dart';
 import 'package:cc_site_flutter/shared/widgets/navbar.dart';
+import 'package:cc_site_flutter/models/menu_items.dart';
+import 'package:flutter/foundation.dart';
 
 class Header extends StatelessWidget {
   // const navBar({Key key}) : super(key: key);
   final MenuController _controller = Get.put(MenuController());
+  final List<Menu> menuItems;
+  final ValueListenable<Menu>? menuItemNotifier;
+
+  Header({
+    Key? key,
+    required this.menuItems,
+    this.menuItemNotifier,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +54,12 @@ class Header extends StatelessWidget {
                               color: Colors.white,
                               fontSize: 30),
                         ),
-                        if (Responsive.isDesktop(context)) NavBar(),
+                        if (Responsive.isDesktop(context))
+                          NavBar(
+                            menuItems: menuItems,
+                            menuItemNotifier:
+                                menuItemNotifier as ValueNotifier<Menu>,
+                          ),
                       ],
                     ),
                   ],

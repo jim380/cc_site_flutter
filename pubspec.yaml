@@ -1,5 +1,5 @@
 name: cc_site_flutter
-description: A new Flutter project.
+description: Cypher Core Websitee.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -32,6 +32,8 @@ dependencies:
   get: ^4.1.4
   flutter_svg: ^0.19.3
   font_awesome_flutter: ^9.1.0
+  equatable: ^2.0.2
+  url_strategy: ^0.2.0
 
 dev_dependencies:
   flutter_test:

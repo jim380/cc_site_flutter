@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/state_manager.dart';
+import 'package:cc_site_flutter/models/menu_items.dart';
 
 class MenuController extends GetxController {
   RxInt _selectedIndex = 0.obs;
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   int get selectedIndex => _selectedIndex.value;
-  List<String> get menuItems => ["About Us", "Services", "Blog", "Contact"];
+  List<Menu> get navBarMenu => menu;
   GlobalKey<ScaffoldState> get scaffoldkey => _scaffoldKey;
 
   void openOrCloseDrawer() {

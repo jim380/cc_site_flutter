@@ -27,13 +27,13 @@ class RouteGenerator {
     }
   }
 
-  static List<Route> generateInitialRoutes(String name) {
-    return <Route>[
-      MaterialPageRoute(
-        builder: (_) => HomeView(),
-      )
-    ];
-  }
+  // static List<Route> generateInitialRoutes(String name) {
+  //   return <Route>[
+  //     MaterialPageRoute(
+  //       builder: (_) => HomeView(),
+  //     )
+  //   ];
+  // }
 }
 
 class RouteException implements Exception {

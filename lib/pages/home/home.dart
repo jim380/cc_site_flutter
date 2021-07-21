@@ -9,10 +9,20 @@ import "package:cc_site_flutter/controllers/menu_controller.dart";
 import 'package:cc_site_flutter/shared/widgets/header.dart';
 import 'package:cc_site_flutter/shared/widgets/side_menu.dart';
 import 'package:cc_site_flutter/pages/home/footer/footer.dart';
+import 'package:cc_site_flutter/models/menu_items.dart';
+import 'package:flutter/foundation.dart';
 
 class HomeView extends StatelessWidget {
   // const HomeView({Key? key}) : super(key: key);
   final MenuController _controller = Get.put(MenuController());
+  final List<Menu> menuItems;
+  final ValueListenable<Menu>? menuItemNotifier;
+
+  HomeView({
+    Key? key,
+    required this.menuItems,
+    this.menuItemNotifier,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +49,19 @@ class HomeView extends StatelessWidget {
               children: <Widget>[
                 // Navbar(),
                 // NavigationBar(),
-                Header(),
+                Header(
+                  menuItems: menuItems,
+                  menuItemNotifier: menuItemNotifier as ValueNotifier<Menu>,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                       vertical: 20.0, horizontal: 40.0),
                   child: IntroSection(),
                 ),
-                ServiceSection(),
+                ServiceSection(
+                  menuItems: menuItems,
+                  menuItemNotifier: menuItemNotifier as ValueNotifier<Menu>,
+                ),
                 PortfolioSection(),
                 TeamSection(),
                 Footer(),
