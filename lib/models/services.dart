@@ -18,7 +18,7 @@ List<Service> services = [
   ),
   Service(
     id: 2,
-    title: "Web Development",
+    title: "IBC Relaying",
     image: "assets/images/desktop.png",
     color: Color(0xFFE4FFC7),
   ),
@@ -30,7 +30,7 @@ List<Service> services = [
   ),
   Service(
     id: 4,
-    title: "Event Hosting",
+    title: "Publication",
     image: "assets/images/Intreaction_design.png",
     color: Color(0xFFFFE0E0),
   ),

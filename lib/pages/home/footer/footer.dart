@@ -43,7 +43,7 @@ class Footer extends StatelessWidget {
             height: 60,
           ),
           Text(
-            'copyright © 2021 Cypher Core all right reserved',
+            'copyright © 2022 Cypher Core all right reserved',
             style: TextStyle(
               fontSize: 12.0,
               color: BrandColors.colorSecondText,

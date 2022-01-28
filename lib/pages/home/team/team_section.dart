@@ -1,3 +1,4 @@
+import 'package:cc_site_flutter/pages/home/team/widgets/team_card2.dart';
 import 'package:flutter/material.dart';
 import 'package:cc_site_flutter/shared/section_title.dart';
 import 'package:cc_site_flutter/constants/constants.dart';
@@ -30,7 +31,7 @@ class TeamSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 members.length,
-                (index) => TeamCard(index: index).moveUpOnHover,
+                (index) => TeamCard2(index: index).moveUpOnHover,
               ),
             )),
           ],
