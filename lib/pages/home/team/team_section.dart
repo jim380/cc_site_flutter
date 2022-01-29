@@ -31,7 +31,8 @@ class TeamSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 members.length,
-                (index) => TeamCard2(index: index).moveUpOnHover,
+                // (index) => TeamCard2(index: index).moveUpOnHover,
+                (index) => TeamCard2(index: index),
               ),
             )),
           ],

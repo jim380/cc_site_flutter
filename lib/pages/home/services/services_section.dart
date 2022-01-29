@@ -1,3 +1,4 @@
+import 'package:cc_site_flutter/pages/home/services/widgets/service_card2.dart';
 import 'package:flutter/material.dart';
 import 'package:cc_site_flutter/shared/section_title.dart';
 import 'package:cc_site_flutter/constants/constants.dart';
@@ -29,7 +30,7 @@ class ServiceSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 services.length,
-                (index) => ServiceCard(index: index),
+                (index) => ServiceCard2(index: index),
               ),
             )),
           ],
