@@ -30,7 +30,7 @@ class ServiceSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
                 services.length,
-                (index) => ServiceCard2(index: index),
+                (index) => ServiceCard(index: index),
               ),
             )),
           ],

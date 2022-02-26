@@ -63,25 +63,25 @@ class _LandingState extends State<Landing> {
                         // ),
                       ),
                       Spacer(),
-                      // Row(
-                      //   children: navitems
-                      //       .map((e) => NavButton(
-                      //             text: e,
-                      //             function: () {
-                      //               setState(() {
-                      //                 condition = true;
-                      //                 height =
-                      //                     MediaQuery.of(context).size.height;
-                      //               });
+                      Row(
+                        children: navitems
+                            .map((e) => NavButton(
+                                  text: e,
+                                  function: () {
+                                    setState(() {
+                                      condition = true;
+                                      height =
+                                          MediaQuery.of(context).size.height;
+                                    });
 
-                      //               Future.delayed(Duration(milliseconds: 1000),
-                      //                   () {
-                      //                 Navigator.pushNamed(context, '/$e');
-                      //               });
-                      //             },
-                      //           ))
-                      //       .toList(),
-                      // )
+                                    Future.delayed(Duration(milliseconds: 1000),
+                                        () {
+                                      Navigator.pushNamed(context, '/$e');
+                                    });
+                                  },
+                                ))
+                            .toList(),
+                      )
                     ],
                   ),
                   Spacer(),
@@ -95,15 +95,15 @@ class _LandingState extends State<Landing> {
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
                           shadows: <Shadow>[
-                            Shadow(
-                              offset: Offset(10.0, 10.0),
-                              blurRadius: 3.0,
-                              color: Color.fromARGB(255, 0, 0, 0),
-                            ),
+                            // Shadow(
+                            //   offset: Offset(10.0, 10.0),
+                            //   blurRadius: 3.0,
+                            //   color: Color.fromARGB(255, 0, 0, 0),
+                            // ),
                             Shadow(
                               offset: Offset(10.0, 10.0),
                               blurRadius: 8.0,
-                              color: Color.fromARGB(125, 0, 0, 255),
+                              color: Color.fromARGB(124, 179, 255, 0),
                             ),
                           ],
                         ),
@@ -156,8 +156,7 @@ class _LandingState extends State<Landing> {
                         shape: RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0))),
-                        onPressed: () => Navigator.of(context)
-                            .pushNamed(RouteGenerator.AboutRoute),
+                        onPressed: () => {},
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               vertical: 20.0, horizontal: 40.0),
@@ -215,22 +214,12 @@ class _LandingState extends State<Landing> {
                               SizedBox(
                                 height: 15.0,
                               ),
-                              Icon(FontAwesomeIcons.facebook,
-                                  color: Colors.white),
-                              SizedBox(
-                                height: 15.0,
-                              ),
                               Icon(FontAwesomeIcons.linkedin,
                                   color: Colors.white),
                               SizedBox(
                                 height: 15.0,
                               ),
                               Icon(FontAwesomeIcons.github,
-                                  color: Colors.white),
-                              SizedBox(
-                                height: 15.0,
-                              ),
-                              Icon(FontAwesomeIcons.instagram,
                                   color: Colors.white),
                             ],
                           ),
