@@ -14,7 +14,7 @@ packages:
       name: auto_size_text
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "3.0.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -110,7 +110,7 @@ packages:
       name: flutter_bootstrap
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "2.0.0"
   flutter_svg:
     dependency: "direct main"
     description:

@@ -9,7 +9,6 @@ class Landing extends StatefulWidget {
   _LandingState createState() => _LandingState();
 }
 
-List navitems = ["About", "Resume", "Blog", "Contact"];
 List text = ["dreamers", "thinkers", "doers"];
 
 class _LandingState extends State<Landing> {
@@ -63,28 +62,12 @@ class _LandingState extends State<Landing> {
                         // ),
                       ),
                       Spacer(),
-                      Row(
-                        children: navitems
-                            .map((e) => NavButton(
-                                  text: e,
-                                  function: () {
-                                    setState(() {
-                                      condition = true;
-                                      height =
-                                          MediaQuery.of(context).size.height;
-                                    });
-
-                                    Future.delayed(Duration(milliseconds: 1000),
-                                        () {
-                                      Navigator.pushNamed(context, '/$e');
-                                    });
-                                  },
-                                ))
-                            .toList(),
-                      )
                     ],
                   ),
-                  Spacer(),
+                  // Spacer(),
+                  SizedBox(
+                    height: 200,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -151,21 +134,24 @@ class _LandingState extends State<Landing> {
                           ],
                         ),
                       ),
+                      SizedBox(
+                        height: 50,
+                      ),
                       MaterialButton(
-                        // color: Colors.white,
+                        color: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0))),
-                        onPressed: () => {},
+                        onPressed: () => Navigator.pushNamed(context, '/Home'),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              vertical: 20.0, horizontal: 40.0),
+                              vertical: 10.0, horizontal: 25.0),
                           child: Text(
                             "Get to know us",
                             style: GoogleFonts.poppins(
-                                fontSize: 31.0,
+                                fontSize: 16.0,
                                 fontWeight: FontWeight.w500,
-                                color: Colors.white),
+                                color: Colors.black),
                           ),
                         ),
                       ).moveUpOnHover
@@ -258,33 +244,6 @@ class _LandingState extends State<Landing> {
               )
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class NavButton extends StatefulWidget {
-  final String text;
-  final Function function;
-  NavButton({required this.function, required this.text});
-  @override
-  _NavButtonState createState() => _NavButtonState();
-}
-
-class _NavButtonState extends State<NavButton> {
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        widget.function();
-      },
-      child: Padding(
-        padding: const EdgeInsets.only(right: 25.0),
-        child: Text(
-          widget.text,
-          style: GoogleFonts.poppins(
-              fontSize: 15.0, fontWeight: FontWeight.w300, color: Colors.white),
         ),
       ),
     );

@@ -39,6 +39,25 @@ class HomeView extends StatelessWidget {
               children: <Widget>[
                 // Navbar(),
                 // NavigationBar(),
+                // Align(
+                //   alignment: Alignment.centerRight,
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(top: 25.0, right: 25.0),
+                //     child: GestureDetector(
+                //       onTap: () {
+                //         Future.delayed(Duration(milliseconds: 1000), () {
+                //           Navigator.pushNamed(context, '/');
+                //         });
+                //       },
+                //       child: Container(
+                //           child: Icon(
+                //         Icons.arrow_back,
+                //         color: Colors.white,
+                //         size: 35.0,
+                //       )),
+                //     ),
+                //   ),
+                // ),
                 Header(),
                 Padding(
                   padding: const EdgeInsets.symmetric(

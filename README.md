@@ -15,6 +15,7 @@ $ flutter build web
 Copy over the `build/web` folder and NGINX it. You can also use other hosting services such as Github Pages and Firebase Hosting.
 
 ## Design Credit
+- https://github.com/Am-I-Worthy/Responsive-Web-App-with-Custom-Animation
 - https://github.com/abuanwar072/Protfolio-Website-Flutter-Web
 - https://github.com/letsdoit07/flutter_webpage
 - https://www.filledstacks.com/

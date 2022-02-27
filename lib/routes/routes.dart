@@ -1,4 +1,8 @@
+import 'package:cc_site_flutter/pages/Home.dart';
+import 'package:cc_site_flutter/pages/Project.dart';
 import 'package:cc_site_flutter/pages/about/about.dart';
+import 'package:cc_site_flutter/pages/home/About.dart';
+import 'package:cc_site_flutter/pages/home/Contact.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../pages/home/home.dart';
@@ -14,19 +18,19 @@ class Flurorouter {
 
   static Handler _aboutHandler = Handler(
       handlerFunc: (BuildContext? context, Map<String, dynamic> params) =>
-          HomeView());
+          About());
 
-  static Handler _blogHandler = Handler(
+  static Handler _homeHandler = Handler(
       handlerFunc: (BuildContext? context, Map<String, dynamic> params) =>
           HomeView());
 
   static Handler _contactHandler = Handler(
       handlerFunc: (BuildContext? context, Map<String, dynamic> params) =>
-          HomeView());
+          Contact());
 
-  static Handler _resumeHandler = Handler(
+  static Handler _projectHandler = Handler(
       handlerFunc: (BuildContext? context, Map<String, dynamic> params) =>
-          HomeView());
+          Project());
 
   static void setupRouter() {
     router.define(
@@ -34,23 +38,23 @@ class Flurorouter {
       handler: _landingPageHandler,
     );
     router.define(
+      '/Home',
+      handler: _homeHandler,
+      // transitionType: TransitionType.fadeIn,
+    );
+    router.define(
       '/About',
       handler: _aboutHandler,
       // transitionType: TransitionType.fadeIn,
     );
     router.define(
-      '/Blog',
-      handler: _blogHandler,
+      '/Projects',
+      handler: _projectHandler,
       // transitionType: TransitionType.fadeIn,
     );
     router.define(
       '/Contact',
       handler: _contactHandler,
-      // transitionType: TransitionType.fadeIn,
-    );
-    router.define(
-      '/Resume',
-      handler: _resumeHandler,
       // transitionType: TransitionType.fadeIn,
     );
   }
