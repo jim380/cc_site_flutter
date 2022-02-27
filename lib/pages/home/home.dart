@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:cc_site_flutter/pages/home/portfolio/portfolio_section.dart';
-import 'package:cc_site_flutter/pages/home/team/team_section.dart';
+import 'package:cc_site_flutter/pages/home/sections/portfolio/portfolio_section.dart';
+import 'package:cc_site_flutter/pages/home/sections/team/team_section.dart';
 import 'package:cc_site_flutter/pages/home/services/services_section.dart';
-import 'package:cc_site_flutter/pages/home/intro/intro.dart';
+import 'package:cc_site_flutter/pages/home/sections/intro/intro.dart';
 import 'package:get/get.dart';
 import "package:cc_site_flutter/controllers/menu_controller.dart";
 import 'package:cc_site_flutter/shared/widgets/header.dart';
 import 'package:cc_site_flutter/shared/widgets/side_menu.dart';
-import 'package:cc_site_flutter/pages/home/footer/footer.dart';
+import 'package:cc_site_flutter/pages/home/sections/footer/footer.dart';
 
 class HomeView extends StatelessWidget {
   // const HomeView({Key? key}) : super(key: key);

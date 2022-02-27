@@ -1,24 +1,24 @@
+import 'package:cc_site_flutter/pages/home/sections/team/widgets/team_card2.dart';
 import 'package:flutter/material.dart';
 import 'package:cc_site_flutter/shared/section_title.dart';
 import 'package:cc_site_flutter/constants/constants.dart';
-import 'package:cc_site_flutter/models/services.dart';
+import 'package:cc_site_flutter/models/team.dart';
 
-import 'widgets/services_card.dart';
-
-class ServiceSection extends StatelessWidget {
+class TeamSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {
     return <Widget>[
       Container(
-        // margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+        //margin: EdgeInsets.only(top: kDefaultPadding * 6),
         constraints: BoxConstraints(maxWidth: 1200),
         width: width,
         padding: EdgeInsets.symmetric(vertical: kDefaultPadding * 2.5),
+        //constraints: BoxConstraints(maxWidth: 1110),
         child: Column(
-          children: [
+          children: <Widget>[
             SectionTitle(
-              color: Color(0xFFFF0000),
-              title: "Our Services",
-              subTitle: "What we do",
+              title: "Our Team",
+              subTitle: "Enthusiasts, not employees",
+              color: Color(0xFF00B1FF),
             ),
             SizedBox(height: kDefaultPadding),
             SizedBox(
@@ -28,8 +28,9 @@ class ServiceSection extends StatelessWidget {
               spacing: kDefaultPadding,
               runSpacing: kDefaultPadding * 2,
               children: List.generate(
-                services.length,
-                (index) => ServiceCard(index: index),
+                members.length,
+                // (index) => TeamCard2(index: index).moveUpOnHover,
+                (index) => TeamCard2(index: index),
               ),
             )),
           ],
@@ -50,7 +51,7 @@ class ServiceSection extends StatelessWidget {
         } else if (constraints.maxWidth > 960 && constraints.maxWidth < 1200) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: pageChildren(constraints.biggest.width / 2),
+            children: pageChildren(constraints.biggest.width / 1.5),
           );
         } else {
           return Column(

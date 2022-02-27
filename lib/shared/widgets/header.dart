@@ -3,9 +3,7 @@ import "package:cc_site_flutter/controllers/menu_controller.dart";
 import 'package:get/get.dart';
 import 'package:cc_site_flutter/constants/app_colors.dart';
 import 'package:cc_site_flutter/shared/responsive.dart';
-import 'package:cc_site_flutter/shared/widgets/navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cc_site_flutter/extensions/hover_extension.dart';
 
 class Header extends StatefulWidget {
   @override
@@ -106,7 +104,23 @@ class _HeaderState extends State<Header> {
 class NavButton extends StatefulWidget {
   final String text;
   final Function function;
-  NavButton({required this.function, required this.text});
+  final double? height;
+  final double? width;
+  final Widget? child;
+  final double? thickness;
+  final Curve? curve;
+  final int? milliseconds;
+
+  NavButton(
+      {required this.function,
+      required this.text,
+      this.child,
+      this.milliseconds,
+      this.height,
+      this.curve,
+      this.thickness,
+      this.width});
+
   @override
   _NavButtonState createState() => _NavButtonState();
 }

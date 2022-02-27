@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cc_site_flutter/routes/routes.dart';
-import 'package:cc_site_flutter/extensions/hover_extension.dart';
 
 class Landing extends StatefulWidget {
-  String buttonText = "Enter";
+  final String buttonText = "Enter";
   @override
   _LandingState createState() => _LandingState();
 }

@@ -1,6 +1,5 @@
-import 'package:cc_site_flutter/pages/Landing.dart';
+import 'package:cc_site_flutter/pages/landing/landing.dart';
 import 'package:flutter/material.dart';
-import 'pages/home/home.dart';
 import 'package:cc_site_flutter/routes/routes.dart';
 
 void main() => runApp(MyApp());

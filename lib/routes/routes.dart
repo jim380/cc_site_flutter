@@ -1,12 +1,11 @@
-import 'package:cc_site_flutter/pages/Home.dart';
-import 'package:cc_site_flutter/pages/Project.dart';
-import 'package:cc_site_flutter/pages/home/About.dart';
-import 'package:cc_site_flutter/pages/home/Contact.dart';
+import 'package:cc_site_flutter/pages/project/project.dart';
+import 'package:cc_site_flutter/pages/about/about.dart';
+import 'package:cc_site_flutter/pages/contact/contact.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../pages/home/home.dart';
 import 'package:fluro/fluro.dart';
-import '../pages/Landing.dart';
+import '../pages/landing/landing.dart';
 
 class Flurorouter {
   static final FluroRouter router = FluroRouter();

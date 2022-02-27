@@ -1,40 +1,53 @@
-import 'package:cc_site_flutter/pages/home/team/widgets/team_card2.dart';
 import 'package:flutter/material.dart';
+//import 'package:web_app/components/hireme_card.dart';
+import 'package:cc_site_flutter/models/portfolio.dart';
 import 'package:cc_site_flutter/shared/section_title.dart';
 import 'package:cc_site_flutter/constants/constants.dart';
-import 'package:cc_site_flutter/models/team.dart';
 import 'package:cc_site_flutter/extensions/hover_extension.dart';
-import 'widgets/team_card.dart';
+import 'widgets/portfolio_card.dart';
 
-class TeamSection extends StatelessWidget {
+class PortfolioSection extends StatelessWidget {
   List<Widget> pageChildren(double width) {
     return <Widget>[
       Container(
         //margin: EdgeInsets.only(top: kDefaultPadding * 6),
+        // just for demo
+        // height: 600,
         constraints: BoxConstraints(maxWidth: 1200),
         width: width,
+        // decoration: BoxDecoration(
+        //   color: Color(0xFFF7E8FF).withOpacity(0.3),
+        //   image: DecorationImage(
+        //     fit: BoxFit.cover,
+        //     image: AssetImage("images/recent_work_bg.png"),
+        //   ),
+        // ),
         padding: EdgeInsets.symmetric(vertical: kDefaultPadding * 2.5),
-        //constraints: BoxConstraints(maxWidth: 1110),
         child: Column(
-          children: <Widget>[
+          children: [
+            // Transform.translate(
+            //   offset: Offset(0, -80),
+            //   child: HireMeCard(),
+            // ),
             SectionTitle(
-              title: "Our Team",
-              subTitle: "A collective of blockchain enthusiasts",
-              color: Color(0xFF00B1FF),
+              title: "Our Portfolio",
+              subTitle: "Stake with us",
+              color: Color(0xFFFFB100),
             ),
-            SizedBox(height: kDefaultPadding),
+            SizedBox(height: kDefaultPadding * 1.5),
             SizedBox(
-                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                child: Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              spacing: kDefaultPadding,
-              runSpacing: kDefaultPadding * 2,
-              children: List.generate(
-                members.length,
-                // (index) => TeamCard2(index: index).moveUpOnHover,
-                (index) => TeamCard2(index: index),
+              // width: width,
+              child: Wrap(
+                spacing: kDefaultPadding,
+                runSpacing: kDefaultPadding * 2,
+                children: List.generate(
+                  portfolio.length,
+                  (index) =>
+                      PortfolioCard(index: index, press: () {}).moveUpOnHover,
+                ),
               ),
-            )),
+            ),
+            //SizedBox(height: kDefaultPadding * 5),
           ],
         ),
       )

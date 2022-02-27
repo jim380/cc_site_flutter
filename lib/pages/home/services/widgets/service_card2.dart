@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:cc_site_flutter/models/services.dart';
-import 'package:cc_site_flutter/extensions/hover_extension.dart';
-import 'package:cc_site_flutter/constants/constants.dart';
 import 'package:glass/glass.dart';
 
 class ServiceCard2 extends StatefulWidget {
