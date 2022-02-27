@@ -1,6 +1,5 @@
 import 'package:cc_site_flutter/pages/Home.dart';
 import 'package:cc_site_flutter/pages/Project.dart';
-import 'package:cc_site_flutter/pages/about/about.dart';
 import 'package:cc_site_flutter/pages/home/About.dart';
 import 'package:cc_site_flutter/pages/home/Contact.dart';
 import 'package:flutter/material.dart';

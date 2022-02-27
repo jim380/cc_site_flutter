@@ -5,6 +5,7 @@ import 'package:cc_site_flutter/routes/routes.dart';
 import 'package:cc_site_flutter/extensions/hover_extension.dart';
 
 class Landing extends StatefulWidget {
+  String buttonText = "Enter";
   @override
   _LandingState createState() => _LandingState();
 }
@@ -17,6 +18,7 @@ class _LandingState extends State<Landing> {
   double height = 1500;
   int i = 0;
   bool condition = false;
+  bool animate = false;
 
   @override
   void initState() {
@@ -137,24 +139,116 @@ class _LandingState extends State<Landing> {
                       SizedBox(
                         height: 50,
                       ),
-                      MaterialButton(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.0))),
-                        onPressed: () => Navigator.pushNamed(context, '/Home'),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 25.0),
-                          child: Text(
-                            "Get to know us",
-                            style: GoogleFonts.poppins(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black),
+                      // MaterialButton(
+                      //   color: Colors.white,
+                      //   shape: RoundedRectangleBorder(
+                      //       borderRadius:
+                      //           BorderRadius.all(Radius.circular(20.0))),
+                      //   onPressed: () => Navigator.pushNamed(context, '/Home'),
+                      //   child: Padding(
+                      //     padding: const EdgeInsets.symmetric(
+                      //         vertical: 10.0, horizontal: 25.0),
+                      //     child: Text(
+                      //       "Enter",
+                      //       style: GoogleFonts.poppins(
+                      //           fontSize: 16.0,
+                      //           fontWeight: FontWeight.w500,
+                      //           color: Colors.black),
+                      //     ),
+                      //   ),
+                      // ).moveUpOnHover,
+                      Container(
+                        height: 50,
+                        width: 250,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () => Navigator.pushNamed(context, '/Home'),
+                            child: MouseRegion(
+                              onEnter: (val) {
+                                setState(() {
+                                  animate = true;
+                                });
+                              },
+                              onExit: (val) {
+                                setState(() {
+                                  animate = false;
+                                });
+                              },
+                              child: Container(
+                                width: 250,
+                                child: Stack(
+                                  children: [
+                                    AnimatedContainer(
+                                      alignment:
+                                          Alignment(animate ? -0.70 : 0, 0),
+                                      duration: Duration(milliseconds: 400),
+                                      curve: Curves.easeInSine,
+                                      height: 50,
+                                      width: animate ? 250 : 50,
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    AnimatedPadding(
+                                      padding: EdgeInsets.only(
+                                          left: animate ? 35 : 15),
+                                      duration: Duration(milliseconds: 400),
+                                      child: Container(
+                                        height: 50.0,
+                                        child: Icon(
+                                          Icons.arrow_forward_ios_rounded,
+                                          color: Colors.black87,
+                                        ),
+                                      ),
+                                    ),
+                                    AnimatedPositioned(
+                                      left: animate ? 25.0 : 10,
+                                      top: 23.5,
+                                      child: AnimatedOpacity(
+                                        opacity: animate ? 1 : 0,
+                                        duration: Duration(milliseconds: 300),
+                                        child: Container(
+                                          height: 3.0,
+                                          width: 24.0,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(5.0),
+                                            color: Colors.black87,
+                                          ),
+                                        ),
+                                      ),
+                                      duration: Duration(milliseconds: 400),
+                                      curve: Curves.easeInOutSine,
+                                    ),
+                                    Container(
+                                      height: 50.0,
+                                      padding: EdgeInsets.only(left: 25.0),
+                                      child: Center(
+                                        child: Text(
+                                          widget.buttonText,
+                                          style: TextStyle(
+                                              fontSize: 21.0,
+                                              fontWeight: FontWeight.w700,
+                                              color: animate
+                                                  ? Colors.black87
+                                                  : Colors.white),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
                         ),
-                      ).moveUpOnHover
+                      ),
                     ],
                   ),
                   Spacer(),
