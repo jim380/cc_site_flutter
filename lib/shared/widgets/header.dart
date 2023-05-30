@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import "package:cc_site_flutter/controllers/menu_controller.dart";
+import "package:cc_site_flutter/controllers/menu_controller.dart"
+    as Local_MenuController;
 import 'package:get/get.dart';
 import 'package:cc_site_flutter/constants/app_colors.dart';
 import 'package:cc_site_flutter/shared/responsive.dart';
@@ -16,7 +17,8 @@ List navitems = ["About", "Projects", "Contact"];
 
 class _HeaderState extends State<Header> {
   // const navBar({Key key}) : super(key: key);
-  final MenuController _controller = Get.put(MenuController());
+  final Local_MenuController.MenuController _controller =
+      Get.put(Local_MenuController.MenuController());
   double width = 180;
   double height = 1500;
   int i = 0;

@@ -5,14 +5,16 @@ import 'package:cc_site_flutter/pages/home/team/team_section.dart';
 import 'package:cc_site_flutter/pages/home/services/services_section.dart';
 import 'package:cc_site_flutter/pages/home/intro/intro.dart';
 import 'package:get/get.dart';
-import "package:cc_site_flutter/controllers/menu_controller.dart";
+import "package:cc_site_flutter/controllers/menu_controller.dart"
+    as Local_MenuController;
 import 'package:cc_site_flutter/shared/widgets/header.dart';
 import 'package:cc_site_flutter/shared/widgets/side_menu.dart';
 import 'package:cc_site_flutter/pages/home/footer/footer.dart';
 
 class HomeView extends StatelessWidget {
   // const HomeView({Key? key}) : super(key: key);
-  final MenuController _controller = Get.put(MenuController());
+  final Local_MenuController.MenuController _controller =
+      Get.put(Local_MenuController.MenuController());
 
   @override
   Widget build(BuildContext context) {

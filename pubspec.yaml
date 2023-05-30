@@ -14,7 +14,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: "^3.0.0"
 
 dependencies:
   flutter:
@@ -27,17 +27,17 @@ dependencies:
   get_it:
   stacked: ^2.2.3
   provider: ^5.0.0
-  http: ^0.13.4
-  get: ^4.1.4
-  flutter_svg: ^0.19.3
+  http: ^1.0.0
+  get: ^4.6.5
+  flutter_svg: ^2.0.6
   font_awesome_flutter: ^9.1.0
   glass:
   auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.2
-  fluro: ^2.0.3
+  fluro: ^2.0.5
   flutter_bootstrap: ^2.0.0
   #flutter_icons: ^1.1.0
-  google_fonts: ^2.0.0
+  google_fonts: ^4.0.5
   percent_indicator: ^3.0.1
   #smooth_scroll_web: ^0.0.4
 

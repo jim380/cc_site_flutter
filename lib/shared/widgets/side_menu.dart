@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:cc_site_flutter/controllers/menu_controller.dart';
+import 'package:cc_site_flutter/controllers/menu_controller.dart'
+    as Local_MenuController;
 import 'package:cc_site_flutter/constants/app_colors.dart';
 
 class SideMenu extends StatelessWidget {
-  final MenuController _controller = Get.put(MenuController());
+  final Local_MenuController.MenuController _controller =
+      Get.put(Local_MenuController.MenuController());
 
   @override
   Widget build(BuildContext context) {
